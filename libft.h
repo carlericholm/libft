@@ -6,7 +6,7 @@
 /*   By: cholm <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 16:31:54 by cholm             #+#    #+#             */
-/*   Updated: 2017/11/20 19:53:11 by cholm            ###   ########.fr       */
+/*   Updated: 2018/06/06 19:08:24 by cholm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 typedef	struct		s_list
 {
@@ -66,7 +68,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 void				ft_putendl(char const *s);
@@ -87,4 +89,11 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isblank(int c);
+char				*ft_itoa_upper(unsigned long long int nbr, int base);
+char				*ft_itoa_base_lower(unsigned long long int nbr,
+	unsigned long long int base);
+float				ft_sqrt(float nbr);
+int					ft_pow(int nbr);
+void				ft_free_tab(char **tab);
+
 #endif

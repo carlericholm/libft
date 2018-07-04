@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cholm <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 11:44:53 by cholm             #+#    #+#             */
-/*   Updated: 2018/05/20 18:26:14 by cholm            ###   ########.fr       */
+/*   Created: 2018/01/24 19:48:48 by cholm             #+#    #+#             */
+/*   Updated: 2018/06/04 17:00:49 by cholm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_free_tab(char **tab)
 {
-	int				i;
-	const char		*str;
-	size_t			len;
+	int i;
 
 	i = 0;
-	len = 0;
-	str = s;
-	if (s != NULL)
+	while (tab[i])
 	{
-		while (str[i] != '\0')
-		{
-			len++;
-			i++;
-		}
+		free(tab[i]);
+		i++;
 	}
-	return (len);
+	free(tab);
 }

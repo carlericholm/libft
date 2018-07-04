@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cholm <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 11:44:53 by cholm             #+#    #+#             */
-/*   Updated: 2018/05/20 18:26:14 by cholm            ###   ########.fr       */
+/*   Created: 2018/05/23 20:58:12 by cholm             #+#    #+#             */
+/*   Updated: 2018/05/23 21:01:04 by cholm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int		ft_pow(int nbr)
 {
-	int				i;
-	const char		*str;
-	size_t			len;
-
-	i = 0;
-	len = 0;
-	str = s;
-	if (s != NULL)
-	{
-		while (str[i] != '\0')
-		{
-			len++;
-			i++;
-		}
-	}
-	return (len);
+	return (nbr * nbr);
 }

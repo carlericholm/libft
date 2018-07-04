@@ -6,14 +6,14 @@
 /*   By: cholm <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 18:53:59 by cholm             #+#    #+#             */
-/*   Updated: 2017/11/20 20:23:59 by cholm            ###   ########.fr       */
+/*   Updated: 2018/04/23 19:02:08 by cholm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static void		itoa_isnegative(int *n, int *negative)
+static void		itoa_isnegative(long long int *n, long long int *negative)
 {
 	if (*n < 0)
 	{
@@ -22,12 +22,12 @@ static void		itoa_isnegative(int *n, int *negative)
 	}
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(long long int n)
 {
-	int		temp;
-	int		len;
-	int		negative;
-	char	*str;
+	long long int		temp;
+	long long int		len;
+	long long int		negative;
+	char				*str;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
